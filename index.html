@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/app.js" type="module" defer></script>
+    <link rel="stylesheet" media="(max-width: 2000px)" href="./css/estilos.css">
+    <title>Primer Parcial LaboIII 3D</title>
+</head>
+<body class="body">
+    <header class="divHeader">
+        <nav id="menu">
+            <ul>
+            <img class="logo" src="./img/logo.png" alt="logo.png">
+            <li><a href="">Nosotros</a></li>
+            <li><a href="anuncios.html">Anuncios</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+        </nav>
+    </header>
+    <h3>Administración</h3>
+    <header><img class="animalesjpg" src="./img/tituloAnimales.jpg" alt="tituloAnimales.jpg"></header>
+    <section class="form-container">
+    <form name="formAlta">
+        <fieldset>
+            <legend>Informacion del Anuncio</legend>
+            <div class="alert" style="display: none;" id="alertaCustom">    
+              </div>
+            <input type="hidden" name="id">
+            <label class="labels">TITULO:</label><br/>
+            <input class="inputClass" type="text" name="titulo" id="titulo" placeholder="Titulo" required><br/><br/>
+            <label class="labels">DESCRIPCION:</label><br/>
+            <input class="inputClass" type="text" name="descripcion" id="descripcion" placeholder="Descripcion" required><br/><br/>
+            <label class="labels">ANIMAL:</label><br/>
+            <div class="divRadio">
+            <label class="check">PERRO<input class="check" type="radio" name="radio" id="perro" value="perro" checked></label>
+            <label class="check">GATO<input class="check" type="radio" name="radio" id="gato" value="gato"></label><br/><br/>
+            <label class="labels">CASTRADO<input type="checkbox" name="castrado" id="checkBox" class="check" value="no"></label><br/>
+            </div> 
+            <label class="labels">PRECIO:</label><br/>
+            <input class="inputClass" type="number" name="precio" id="precio" placeholder="Precio" min="0" required><br/><br/>
+
+            <img class="svg" src="./img/pie.svg" alt="pie.svg">
+            <div class="divInput">
+                <input class="inputClass" type="text" name="raza" id="raza" placeholder="Raza" required>
+            </div>
+
+            <img class="svg" src="./img/gato.svg" alt="gato.svg">
+            <div class="divInput">
+                <input class="inputClass" type="date" name="fecha" id="fecha" required>
+            </div>
+
+            <img class="svg" src="./img/vacuna.svg" alt="vacuna.svg">
+            <div class="divInput">
+                <select name="vacunas" id="vacunas" required>
+                    <option value="">----Elegir----</option>
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </fieldset>
+        <br/>
+        <button type="submit" id="btnGuardar" value="btnGuardar"><img class="svgSave" src="./img/save.svg" alt="save.svg">Guardar</button>
+        <input class="submitEliminar" type="hidden" name="btnEliminar" id="btnEliminar" value="Eliminar">
+        <input class="submitCancelar" type="hidden" name="btnCancelar" id="btnCancelar" value="Cancelar">
+        <div class="spinner" id="spin" style="visibility: hidden;"><img src="./img/cat.gif" alt="cat.gif"></div>
+    </form>
+</section>
+<section class="table-container"></section>
+<div class="divFooter">
+    <footer>
+        <ul>
+            <p>Todos los Derechos Reservados 2022 &copy;</p>
+            <li><a href="">Nosotros</a></li>
+            <li><a href="anuncios.html">Anuncios</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+    </footer>
+</div>
+</div>
+</body>
+</html>
